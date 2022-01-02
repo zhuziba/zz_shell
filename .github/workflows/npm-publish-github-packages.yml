@@ -14,6 +14,9 @@ jobs:
         chmod +x ./loop/x86_64/loop
         chmod +x ./loop/armv7/loop
         chmod +x ./*.sh
+        chmod +x ./s6-overlay/etc/services.d/crond/run
+        chmod +x ./s6-overlay/etc/services.d/refresh-cron/refresh-cron
+        chmod +x ./s6-overlay/etc/services.d/refresh-cron/run
     - name: 'Commit Files'
       id: commit
       run: |
