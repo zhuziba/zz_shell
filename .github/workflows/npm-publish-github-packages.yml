@@ -17,6 +17,11 @@ jobs:
         chmod +x ./s6-overlay/etc/services.d/crond/run
         chmod +x ./s6-overlay/etc/services.d/refresh-cron/refresh-cron
         chmod +x ./s6-overlay/etc/services.d/refresh-cron/run
+        chmod +x ./s6-overlay/etc/cont-init.d/10-mkdir
+        chmod +x ./s6-overlay/etc/cont-init.d/20-jup
+        chmod +x ./s6-overlay/etc/cont-init.d/30-config
+        chmod +x ./s6-overlay/etc/cont-init.d/40-hangup
+        chmod +x ./s6-overlay/etc/cont-init.d/50-jbot
     - name: 'Commit Files'
       id: commit
       run: |
