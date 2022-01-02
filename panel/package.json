@@ -1,0 +1,21 @@
+{
+  "name": "panel",
+  "version": "1.0.0",
+  "description": "web panel",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "path": "^0.12.7",
+    "crypto-js": "^4.0.0",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "got": "^11.8.2",
+    "http-server": "^0.12.3",
+    "http-proxy-middleware": "^2.0.1",
+    "tough-cookie": "^4.0.0",
+    "download": "^8.0.0",
+    "request": "^2.88.2"
+  }
+}
