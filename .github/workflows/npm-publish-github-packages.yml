@@ -1,0 +1,28 @@
+name: jd
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: Ubuntu-20.04  
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install build dependencies
+      run: |
+        chmod +x ./loop/aarch64/loop
+        chmod +x ./loop/x86_64/loop
+        chmod +x ./loop/armv7/loop
+        chmod +x ./*.sh
+    - name: 'Commit Files'
+      id: commit
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git diff --quiet && git diff --staged --quiet || git commit -am '.chmod -x'
+    - name: Push Dust
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.PAT }}
+        branch: master
