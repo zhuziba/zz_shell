@@ -3,8 +3,8 @@
 ## 文件路径、脚本网址
 dir_shell=$(dirname $(readlink -f "$0"))
 dir_root=$dir_shell
-url_shell=${JD_SHELL_URL:-https://github.com.cnpmjs.org/zhuziba/zz_shell.git}
-url_scripts=${JD_SCRIPTS_URL:-https://github.com.cnpmjs.org/Aaron-lv/sync.git}
+url_shell=${JD_SHELL_URL:-https://gitclone.com/github.com/zhuziba/zz_shell.git}
+url_scripts=${JD_SCRIPTS_URL:-https://gitclone.com/github.com/Aaron-lv/sync.git}
 send_mark=$dir_shell/send_mark
 
 ## 导入通用变量与函数
